@@ -1,48 +1,17 @@
-# Eliza
+# Bored Bishop - Brand Ambassador
 
-## Edit the character files
-
-Open `src/character.ts` to modify the default character. Uncomment and edit.
-
-### Custom characters
-
-To load custom characters instead:
-- Use `pnpm start --characters="path/to/your/character.json"`
-- Multiple character files can be loaded simultaneously
-
-### Add clients
-
-```diff
-- clients: [],
-+ clients: [Clients.TWITTER, Clients.DISCORD],
-```
-
-## Duplicate the .env.example template
-
-```bash
-cp .env.example .env
-```
+## Capabilities
+Twitter
+Discord
+Shopify Order Status - Shopify Integration - Coming Soon!!
+Product Recommendations RAG Model - Coming Soon!!
 
 \* Fill out the .env file with your own values.
 
-### Add login credentials and keys to .env
+## URL Discord
+Add Bored Bishop to your Discord Channel
+https://discord.com/api/oauth2/authorize?client_id=1326296760808771684&permissions=515433295168&scope=bot%20applications.commands
 
-```diff
--DISCORD_APPLICATION_ID=
--DISCORD_API_TOKEN= # Bot token
-+DISCORD_APPLICATION_ID="000000772361146438"
-+DISCORD_API_TOKEN="OTk1MTU1NzcyMzYxMT000000.000000.00000000000000000000000000000000"
-...
--OPENROUTER_API_KEY=
-+OPENROUTER_API_KEY="sk-xx-xx-xxx"
-...
--TWITTER_USERNAME= # Account username
--TWITTER_PASSWORD= # Account password
--TWITTER_EMAIL= # Account email
-+TWITTER_USERNAME="username"
-+TWITTER_PASSWORD="password"
-+TWITTER_EMAIL="your@email.com"
-```
 
 ## Install dependencies and start your agent
 
