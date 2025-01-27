@@ -8,16 +8,20 @@ const rl = readline.createInterface({
 
 rl.on("SIGINT", () => {
   rl.close();
+  console.log("R1 Closed")
   process.exit(0);
 });
 
 async function handleUserInput(input, agentId) {
   if (input.toLowerCase() === "exit") {
     rl.close();
+    console.log('EXIT')
     process.exit(0);
   }
 
   try {
+    console.log(agentId)
+
     const serverPort = parseInt(settings.SERVER_PORT || "3000");
 
     const response = await fetch(
@@ -41,8 +45,11 @@ async function handleUserInput(input, agentId) {
 }
 
 export function startChat(characters) {
+
   function chat() {
+    console.log("IN CHAT FUNCTION")
     const agentId = characters[0].name ?? "Agent";
+    console.log('about to access r1')
     rl.question("You: ", async (input) => {
       await handleUserInput(input, agentId);
       if (input.toLowerCase() !== "exit") {

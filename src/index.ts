@@ -118,6 +118,7 @@ const checkPortAvailable = (port: number): Promise<boolean> => {
     });
 
     server.once("listening", () => {
+      console.log('server closed')
       server.close();
       resolve(true);
     });
@@ -165,8 +166,11 @@ const startAgents = async () => {
   }
 
   elizaLogger.log("Chat started. Type 'exit' to quit.");
+  elizaLogger.log(characters[0].name)
   const chat = startChat(characters);
-  chat();
+  elizaLogger.log('add characters to chat')
+  // await chat();
+  elizaLogger.log("Chat is bypassed")
 };
 
 startAgents().catch((error) => {
